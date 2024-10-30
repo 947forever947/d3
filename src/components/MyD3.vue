@@ -65,7 +65,7 @@
       .attr("fill", "#4acbd6");
 
     svg.selectAll(".bar")
-       .on("mouseover",function(event,d){
+       .on("mouseover",function(){
         d3.select(this)
             .transition()
             .duration(200)
@@ -73,7 +73,7 @@
             d3.select(this)
             .style("cursor", "pointer")
        })
-       .on("mouseout", function(event, d) {
+       .on("mouseout", function() {
         d3.select(this)
             .transition()
             .duration(200)
