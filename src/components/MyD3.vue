@@ -62,20 +62,22 @@
       .attr("y", (d) => y(d.value))
       .attr("width", x.bandwidth())
       .attr("height", (d) => height - y(d.value))
-      .attr("fill", "#69b3a2");
+      .attr("fill", "#4acbd6");
 
     svg.selectAll(".bar")
        .on("mouseover",function(event,d){
         d3.select(this)
             .transition()
             .duration(200)
-            .attr("fill", "orange");
+            .attr("fill", "red");
+            d3.select(this)
+            .style("cursor", "pointer")
        })
        .on("mouseout", function(event, d) {
         d3.select(this)
             .transition()
             .duration(200)
-            .attr("fill", "steelblue"); // 恢复原始颜色
+            .attr("fill", "#4acbd6"); // 恢复原始颜色
     });
 
   });
