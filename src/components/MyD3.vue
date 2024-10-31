@@ -80,6 +80,16 @@
             .attr("fill", "#4acbd6"); // 恢复原始颜色
     });
 
+    svg.selectAll(".label")
+  .data(data)
+  .join("text")
+  .attr("class", "label")
+  .attr("x", (d) => x(d.name)! + x.bandwidth() / 2) // 设置 x 位置为矩形中间
+  .attr("y", (d) => y(d.value) - 5) // 设置 y 位置为矩形顶部（稍微上移）
+  .attr("text-anchor", "middle") // 使文本居中
+  .text(d => d.value) // 设置文本内容为值
+  .attr("fill", "black"); // 设置文本颜色
+
   });
   </script>
   

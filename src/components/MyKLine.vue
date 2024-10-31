@@ -83,7 +83,7 @@
           .attr("y", y(Math.max(d.open, d.close)))
           .attr("width", x.bandwidth())
           .attr("height", Math.abs(y(d.open) - y(d.close)))
-          .attr("fill", d.open > d.close ? "red" : "green");
+          .attr("fill", d.open < d.close ? "red" : "green");
       });
   });
   </script>

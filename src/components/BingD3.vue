@@ -67,6 +67,14 @@
           .duration(200)
           .attr("fill", d => color(d.data.value) as string); // 恢复原始颜色
       });
+      svg.selectAll("text")
+  .data(pie(data))
+  .join("text")
+  .attr("transform", d => `translate(${arc.centroid(d)})`)  // 计算文本位置
+  .attr("dy", "0.35em")  // 调整垂直位置
+  .text(d => d.data.value)  // 设置文本内容为 value 值
+  .style("text-anchor", "middle")  // 设置文本对齐方式
+  .attr("fill", "white");  // 设置文本颜色
   });
   </script>
   
