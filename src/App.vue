@@ -1,11 +1,7 @@
 <template>
-  <MyD3 />
-  <!-- <Bing /> -->
-   <!-- <KLine /> -->
+  <Ml5></Ml5>
 </template>
 
 <script setup lang="ts">
-import MyD3 from './components/MyD3.vue'
-import Bing from './components/BingD3.vue'
-import KLine from './components/MyKLine.vue'
+import Ml5 from './components/Mlfive.vue'
 </script>
